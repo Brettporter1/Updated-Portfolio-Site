@@ -1,0 +1,124 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Nunito:200,300,400,600&display=swap');
+
+*{
+    box-sizing:border-box;
+    
+}
+body{
+    margin:0;
+    padding:0;
+    position:relative;
+    font-family:'Nunito', sans-serif;
+    background: #000;
+    width:100%;
+}
+#intro{
+    position:relative;
+    height:115vh;
+    margin-top:-10vh;
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    -ms-flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background:#333;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+    #header{
+        h1{
+            font-family: 'Lora', serif;
+            font-weight:400;
+            font-style:italic;
+            font-size:62px;
+            color:#fff;
+            border-right:2px solid #fff;
+            padding:20px;
+        }
+    }
+    .page-links{
+        ul{
+            list-style: none;
+            color:#fff;
+            line-height:200%;
+            a{
+                text-decoration: none;
+                color:#fff;
+                font-size:21px;
+            }
+        }
+
+    }
+    #about-btn{
+        position:absolute;
+        bottom:150px;
+        width:150px;
+        height:55px;
+        background:transparent;
+        border-radius:27px;
+        border:2px solid #000;
+        color:#fff;
+        font-size:18px;
+    }
+    #about-btn:hover{
+        background:#000;
+    }
+    #about-btn:focus{
+        outline: none;
+    }
+}
+.section-header{
+    h1{
+        font-family: 'Lora', serif;
+        font-weight:400;
+        font-style:italic;
+        font-size:62px;
+        color:#fff;
+}
+}
+#developement{
+    position:relative;
+    height:120vh;
+    margin-top:-10vh;
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    -ms-flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background:#000;
+    z-index:-10;
+    -webkit-clip-path: polygon(0 5%, 100% 0, 100% 96%, 0 100%);
+    clip-path: polygon(0 5%, 100% 0, 100% 94%, 0 100%);
+}
+#photography{
+    height:115vh;
+    margin-top:-10vh;
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    -ms-flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background:#999;
+    -webkit-clip-path: polygon(0 5%, 100% 0, 100% 96%, 0 100%);
+    clip-path: polygon(0 5%, 100% 0, 100% 94%, 0 100%);
+    .section-header{
+        color:#999!important;
+    }
+}
+#graphic-design{
+    height:115vh;
+    margin-top:-10vh;
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    -ms-flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background:#000;
+    -webkit-clip-path: polygon(0 5%, 100% 0, 100% 96%, 0 100%);
+    clip-path: polygon(0 5%, 100% 0, 100% 94%, 0 100%);
+    background:#333;
+}
