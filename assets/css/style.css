@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Nunito:200,300,400,600&display=swap");
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -9,41 +11,68 @@ body {
   position: relative;
   font-family: "Nunito", sans-serif;
   background: #000;
-  width: 100%;
+  widows: 100vw;
 }
 
 #intro {
   position: relative;
-  height: 100vh;
-  margin-top: -1vh;
+  height: 105vh;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background: #333;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 98%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 98%, 0 100%);
+  background-color: #fff;
+}
+#intro #myHeadshot {
+  position: absolute;
+  width: 65%;
+  bottom: 0;
+  left: 10px;
+}
+#intro #header {
+  position: absolute;
+  left: 50%;
+  border-left: 2px solid #333;
+  padding: 0px 20px 20px;
 }
 #intro #header h1 {
   font-family: "Lora", serif;
   font-weight: 400;
   font-style: italic;
   font-size: 62px;
-  color: #fff;
-  border-right: 2px solid #fff;
-  padding: 20px;
+  color: #333;
+}
+#intro #header p {
+  font-family: "Lora", serif;
+}
+#intro .page-links-mobile, #intro .page-links-mobile-only {
+  display: none;
+}
+#intro .page-links {
+  position: fixed;
+  z-index: 900;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: flex-end;
 }
 #intro .page-links ul {
   list-style: none;
-  color: #fff;
+  display: flex;
+  color: #333;
   line-height: 200%;
 }
 #intro .page-links ul li {
-  color: #fff;
-  font-size: 21px;
+  color: #333;
+  font-size: 18px;
   cursor: pointer;
+  padding: 0px 20px;
+  border-right: 2px solid #333;
+}
+#intro .page-links ul li:last-child {
+  border: none;
 }
 #intro .about-btn {
   position: absolute;
@@ -53,12 +82,13 @@ body {
   background: transparent;
   border-radius: 27px;
   border: 2px solid #000;
-  color: #fff;
+  color: #333;
   font-size: 18px;
   cursor: pointer;
 }
 #intro .about-btn:hover {
   background: #000;
+  color: #fff;
 }
 #intro .about-btn:focus {
   outline: none;
@@ -66,15 +96,23 @@ body {
 
 .section-header {
   position: relative;
-  top: 10px;
+  top: 20px;
   margin: 20px;
+}
+.section-header .back-to-top {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #343434;
+  opacity: 0.5;
+  cursor: pointer;
 }
 .section-header h1 {
   font-family: "Lora", serif;
   font-weight: 400;
   font-style: italic;
   font-size: 62px;
-  color: #fff;
+  color: #343434;
 }
 
 .content {
@@ -82,8 +120,10 @@ body {
   z-index: 100;
   display: flex;
   flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
+  padding: 30px 0px;
 }
 .content .portfolio-example {
   position: relative;
@@ -93,17 +133,54 @@ body {
   margin: 0.5%;
   overflow: hidden;
 }
+.content .portfolio-example img {
+  position: absolute;
+  width: 110%;
+  height: auto;
+}
 .content .portfolio-example .btn-container {
   position: absolute;
   border-radius: 10px 10px 0px 0px;
+  padding: 10px;
   top: 85%;
   width: 100%;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   justify-content: center;
   background: #000;
   color: #fff;
   opacity: 0.8;
+}
+.content .portfolio-example .btn-container h3 {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+.content .portfolio-example .btn-container p {
+  position: absolute;
+  top: 45px;
+  width: 100%;
+  padding: 0px 20px;
+}
+.content .portfolio-example .btn-container a {
+  color: #fff;
+}
+.content .portfolio-example .btn-container .icon-container {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.content .portfolio-example .btn-container .icon-container .spacer {
+  border: 1px solid #fff;
+  height: 30%;
+  width: 1px;
+}
+.content .portfolio-example .active-category {
+  top: 0px !important;
+  border-radius: 0;
 }
 .content .portfolio-example:nth-child(4) {
   width: 65%;
@@ -115,33 +192,25 @@ body {
 #development {
   position: relative;
   height: auto;
-  margin-top: -1vh;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background: #000;
-  z-index: -10;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 98%);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 98%);
+  background: #eee;
 }
 
 #photography {
   position: relative;
   height: auto;
-  margin-top: -5vh;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background: #999;
-  z-index: -20;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 98%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 98%, 0 100%);
+  background: #f1f1f1;
 }
 #photography .section-header {
   color: #999 !important;
@@ -150,30 +219,290 @@ body {
 #graphic-design {
   position: relative;
   height: auto;
-  margin-top: -5vh;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background: #000;
-  z-index: -30;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 98%);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 98%);
-  background: #333;
+  background: #f2f2f2;
 }
 
 #about {
   position: relative;
   height: 100vh;
-  margin-top: -10vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+#about .about-content {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  width: 40%;
+  padding: 40px;
+  color: #fff;
+}
+#about .about-content p {
+  line-height: 160%;
+  width: 100%;
+}
+#about .about-content #content-links {
+  position: relative;
+  margin: 50px 0px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  justify-content: space-around;
+}
+#about .about-content #content-links button {
+  position: relative;
+  width: 150px;
+  height: 55px;
+  background: transparent;
+  border-radius: 27px;
+  border: 2px solid #343434;
+  color: #343434;
+  font-size: 18px;
+  cursor: pointer;
+}
+#about .about-content #content-links button:hover {
+  border: 2px solid #f3f3f3;
+  color: #f3f3f3;
+}
+
+.coming-soon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: #000;
+  opacity: 0.8;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+.coming-soon h1 {
+  font-size: 82px;
+  margin-top: 150px;
+}
+
+@media only screen and (max-width: 1100px) {
+  #intro #myHeadshot {
+    position: absolute;
+    width: 65%;
+    left: 17%;
+  }
+  #intro #header {
+    position: absolute;
+    top: 150px;
+    width: 40%;
+    left: 30%;
+    text-align: center;
+    border-left: none;
+    border-bottom: 2px solid #333;
+    padding: 0px 20px 20px;
+  }
+  #intro .page-links {
+    top: 20px;
+    right: 15%;
+    width: 70%;
+    justify-content: center;
+  }
+  #intro .about-btn {
+    bottom: 80px;
+    background: #000;
+    border-radius: 27px;
+    border: 2px solid #000;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  #intro .about-btn:hover {
+    background: transparent;
+    color: #333;
+  }
+  #intro .about-btn:focus {
+    outline: none;
+  }
+
+  .content {
+    width: 90%;
+  }
+  .content .portfolio-example {
+    width: 49%;
+  }
+  .content .porfolio-example:nth-child(3n) {
+    width: 100%;
+  }
+  .content .portfolio-example:nth-child(4) {
+    width: 49%;
+  }
+  .content .portfolio-example:nth-child(7) {
+    width: 49%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  #intro #myHeadshot {
+    width: 80%;
+    left: 10%;
+  }
+  #intro #header {
+    position: absolute;
+    top: 120px;
+    width: 60%;
+    left: 20%;
+    text-align: center;
+    border-left: none;
+    border-bottom: 2px solid #333;
+    padding: 0px 20px 20px;
+  }
+  #intro #header h1 {
+    font-family: "Lora", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 62px;
+    color: #333;
+  }
+  #intro #header p {
+    font-family: "Lora", serif;
+  }
+  #intro .page-links {
+    top: 20px;
+    right: 0%;
+    width: 100%;
+    justify-content: center;
+  }
+  #intro .about-btn {
+    bottom: 80px;
+    width: 150px;
+    height: 55px;
+  }
+  #intro .about-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+  #intro .about-btn:focus {
+    outline: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .hide {
+    display: none !important;
+  }
+
+  a, a:hover, a:focus {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  #intro {
+    width: 100%;
+    position: relative;
+  }
+  #intro #myHeadshot {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+  #intro #header {
+    position: absolute;
+    top: 156px;
+    width: 90%;
+    left: 5%;
+    text-align: center;
+    border-left: none;
+    border-bottom: 2px solid #333;
+    padding: 0px 20px 20px;
+  }
+  #intro #header h1 {
+    font-family: "Lora", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 48px;
+    color: #333;
+  }
+  #intro #header p {
+    font-family: "Lora", serif;
+  }
+  #intro .page-links-mobile {
+    position: fixed;
+    z-index: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    background: #000;
+    color: #fff;
+  }
+  #intro .page-links {
+    display: none;
+  }
+  #intro .page-links-mobile-only {
+    position: fixed;
+    z-index: 900;
+    display: flex;
+    top: -156px;
+    width: 100%;
+    padding: 0px;
+    justify-content: space-around;
+    background: #000;
+    color: #fff;
+  }
+  #intro .page-links-mobile-only ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    line-height: 200%;
+  }
+  #intro .page-links-mobile-only ul li {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-right: none;
+  }
+  #intro .page-links-mobile-only ul li:last-child {
+    border: none;
+  }
+  #intro .about-btn {
+    bottom: 80px;
+    width: 150px;
+    height: 55px;
+  }
+
+  .content {
+    width: 100%;
+  }
+  .content .portfolio-example {
+    width: 100%;
+  }
+  .content .portfolio-example:nth-child(4) {
+    width: 100%;
+  }
+  .content .portfolio-example:nth-child(7) {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
