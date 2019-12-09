@@ -182,12 +182,6 @@ body {
   top: 0px !important;
   border-radius: 0;
 }
-.content .portfolio-example:nth-child(4) {
-  width: 65%;
-}
-.content .portfolio-example:nth-child(7) {
-  width: 65%;
-}
 
 #development {
   position: relative;
