@@ -135,7 +135,7 @@ body {
 }
 .content .portfolio-example img {
   position: absolute;
-  width: 110%;
+  width: 100%;
   height: auto;
 }
 .content .portfolio-example .btn-container {

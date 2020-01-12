@@ -25,7 +25,6 @@ $('.btn-container').mouseleave(function(){
 })
 
 let dropheight = $('.page-links-mobile-only').height();
-console.log(dropheight);
 $('.page-links-mobile').on('click', function(){
     TweenLite.to(this, 1, {className:'+=hide'});
     TweenLite.to('.page-links-mobile-only', 1, {y:dropheight})
