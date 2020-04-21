@@ -47,7 +47,25 @@ body {
 #intro #header p {
   font-family: "Lora", serif;
 }
-#intro .page-links-mobile, #intro .page-links-mobile-only {
+#intro #header .contact a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: inherit;
+  margin-top: 10px;
+}
+#intro #header .contact a:hover {
+  text-decoration: underline;
+  color: #cc5500;
+}
+#intro #header .contact a i {
+  font-size: 18px;
+  padding: 0 10px 0 0;
+  color: #aaa;
+}
+#intro .page-links-mobile,
+#intro .page-links-mobile-only {
   display: none;
 }
 #intro .page-links {
@@ -71,6 +89,9 @@ body {
   padding: 0px 20px;
   border-right: 2px solid #333;
 }
+#intro .page-links ul li:hover {
+  color: #cc5500;
+}
 #intro .page-links ul li:last-child {
   border: none;
 }
@@ -88,7 +109,7 @@ body {
 }
 #intro .about-btn:hover {
   background: #000;
-  color: #fff;
+  color: #cc5500;
 }
 #intro .about-btn:focus {
   outline: none;
@@ -496,7 +517,9 @@ body {
     display: none !important;
   }
 
-  a, a:hover, a:focus {
+  a,
+a:hover,
+a:focus {
     text-decoration: none;
     color: inherit;
   }
